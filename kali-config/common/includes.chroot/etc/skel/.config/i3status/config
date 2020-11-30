@@ -1,0 +1,38 @@
+general {
+	colors = false
+}
+
+order += "disk /home"
+order += "volume master"
+order += "cpu_temperature 0"
+order += "tztime local"
+
+battery 0 {
+	format = "%status %percentage %remaining"
+	format_down = ""
+	status_chr = "⚇ CHR"
+	status_bat = "⚡ BAT"
+	status_full = "☻ FULL"
+	path = "/sys/class/power_supply/BAT%d/uevent"
+	low_threshold = 10
+}
+
+tztime local {
+	format = "%a %d %b %Y  | %H:%M |"
+}
+
+disk "/home" {
+	format = "~: %avail"
+}
+
+cpu_temperature 0 {
+	format = "CPU: %degrees°C"
+}
+
+volume master {
+	format = "♪: %volume"
+	format_muted = "♪: muted (%volume)"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}

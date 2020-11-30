@@ -1,0 +1,45 @@
+configuration {
+    display-drun: "Apps";
+    display-window: "Window";
+    show-icons:true;
+    drun-icon-theme: "Papirus Dark";
+}
+
+* {
+    columns: 1;
+    background-color: #161821;
+    text-color: #FFFFFF;
+    font: "Iosevka Semibold 16";
+}
+
+#window {
+    padding: 20;
+    width: 45%;
+    height: 30%;
+    border-radius: 5px;
+}
+
+#listview {
+    spacing: 5px;
+    padding: 10px 10px 0px;
+}
+
+#element {
+    background-color: #00000000;
+    border-radius: 5px;
+    padding: 5;
+}
+
+#element selected {
+    background-color: #00a0e6;
+}
+
+#inputbar {
+    children: [prompt,textbox-prompt-colon,entry,case-indicator];
+}
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+}
